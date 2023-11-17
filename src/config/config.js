@@ -9,6 +9,6 @@ const env = {
     userDb: process.env.userDb,
     hostDb: process.env.hostDb,
     nameDb: process.env.nameDb,
-}
+};
 
-export default env
+export default env;

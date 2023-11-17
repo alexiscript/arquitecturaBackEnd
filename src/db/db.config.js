@@ -1,12 +1,16 @@
 import mongoose from "mongoose";
 import env  from "../config/config.js"
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const {
-    passwordDb ='XHzxaGgsH9DmOh7N',
-    userDb='Desafio',
-    hostDb ='desafio.tsokbhn.mongodb.net',
-    nameDb ='EcomerceApi',
+    passwordDb,
+    userDb,
+    hostDb,
+    nameDb,
 } = env
+
 
 mongoose
     .connect(`mongodb+srv://${userDb}:${passwordDb}@${hostDb}/${nameDb}?retryWrites=true&w=majority`)

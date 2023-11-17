@@ -6,14 +6,14 @@ import { Strategy as LocalStrategy } from "passport-local";
 import { UserModel } from "../db/models/User.model.js"
 import { dbM } from "../controller/sessions.controller.js";
 import env from "../config/config.js"
+import dotenv from "dotenv";
+dotenv.config();
 
-
-
-const { clientID ='Iv1.98706f2a29e23791',
-    clientSecret='569efc8292bb6da36be87a1adcd28ec1752c5ca8',
-    callbackURL='http://localhost:8080/api/sessions/githubcallback'
-    } = env
-
+const {
+    clientID,
+    clientSecret,
+    callbackURL,
+} = env
 
 
 let encryptRounds = 1
